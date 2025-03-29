@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= titulo %></title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Times New Roman', Times, serif;
+		}
+		body {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.logo {
+			position: absolute;
+			margin: 0 auto;
+			top: 5%;
+		}
+		.logo span {
+			font-size: 40px;
+		}
+		.form-container {
+			width: 30%;
+			margin: 10%;
+			height: 70%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+		.form {
+			width: 70%;
+			margin-top: 20%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.form span {
+			position: absolute;
+			top: 10%;
+			font-size: 36px;
+		}
+		.form input {
+			width: 360px;
+			height: 50px;
+			border-radius: 25px;
+			background-color: #ece6f0;
+			text-indent: 15px;
+			margin-bottom: 5px;
+		}
+		.form label {
+			font-size: 20px;
+			margin: 5px;
+		}
+		.form button {
+			width: 200px;
+			height: 50px;
+			border-radius: 25px;
+			background-color: #ece6f0;
+			border: 0;
+			margin: 20px auto;
+		}
+		.form button:hover {
+			background-color: #beb8c2;
+		}
+		.divider {
+			width: 4px;
+			height: 50%;
+			position: relative;
+			background-color: black;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Logo -->
+	<div class="logo">
+		<img src="" alt="">
+		<span>BookHub</span>
+	</div>
+
+	<!-- Login -->
+	<div class="form-container">
+		<form class="form" action="/login" method="POST">
+			<span>Login</span>
+			<label>Email</label>
+			<input type="email" name="email" required>
+			<label>Senha</label>
+			<input type="password" name="senha" required>
+			<button type="submit" class="btn-login">Entrar</button>
+		</form>
+	</div>
+
+	<div class="divider"></div>
+
+	<!-- Cadastro -->
+	<div class="form-container">
+		<form class="form">
+			<span>Cadastro</span>
+			<label>Seu nome</label>
+			<input type="text" name="nome" required>
+			<label>E-mail</label>
+			<input type="email" name="email" required>
+			<label>Idade</label>
+			<input type="number" name="idade" min="0" max="100" required>
+			<label>Senha</label>
+			<input type="password" name="senha" required>
+			<button type="submit" class="btn-register">Cadastrar</button>
+		</form>
+	</div>
+</body>
+
+</html>
