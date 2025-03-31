@@ -29,9 +29,8 @@
 			font-size: 40px;
 		}
 		.form-container {
-			width: 30%;
-			margin: 10%;
-			height: 70%;
+			width: 40%;
+			margin: 0 5%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -42,16 +41,16 @@
 			width: 70%;
 			margin-top: 20%;
 			display: flex;
+			flex-shrink: 0;
 			flex-direction: column;
 			justify-content: space-between;
 		}
 		.form span {
 			position: absolute;
-			top: 10%;
+			top: 5%;
 			font-size: 36px;
 		}
 		.form input {
-			width: 360px;
 			height: 50px;
 			border-radius: 25px;
 			background-color: #ece6f0;
@@ -79,6 +78,26 @@
 			position: relative;
 			background-color: black;
 			border-radius: 10px;
+		}
+
+		@media (max-width: 1400px) {
+			.logo {
+				top: 2%;
+			}
+			.form input {
+				width: 300px;
+			}
+			.logo span {
+				font-size: 30px;
+			}
+			.form label {
+				font-size: 15px;
+			}
+			.form span {
+			position: absolute;
+			top: 5%;
+			font-size: 25px;
+		}
 		}
 	</style>
 </head>
